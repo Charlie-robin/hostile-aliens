@@ -93,28 +93,23 @@
         }
         removeScreen() {
             this.hitPoints <= 0 ? document.getElementById(this.name).style.display = "none" : null;
-        }
-    }
+        }}
     class Defenceship extends AttackShip {
         constructor(name,type,hitPoints,damage){
             super(name,type,hitPoints,damage);
-        }
-    }
+        }}
     class MotherShip extends AttackShip {
         constructor(name,type,hitPoints,damage){
             super(name,type,hitPoints,damage);
-        }
-    }
+        }}
     let shipArray = [];
     const buildShips = (shipType, numShips) => {
         for (let index = 0; index < numShips; index++) {
             if (shipType === "attack"){
             shipArray.push(new AttackShip(("A" + index),"attack",45, 12))
-        }   else {
+            } else {
             shipArray.push(new Defenceship(("D" + index),"defence",80, 10))
-        }
-    }
-    }
+        }}}
     const clearGame = () => { 
         document.getElementById("mothership").innerHTML = "";
         document.getElementById("attack").innerHTML = "";
